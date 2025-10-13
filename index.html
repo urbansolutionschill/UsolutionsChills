@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UsolutionsChill</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Section: Logo + Search -->
+  <div class="top-bar">
+    <div class="top-logo">
+      <img src="logo 1.png" alt="Logo" />
+      <h1>UsolutionsChill</h1>
+    </div>
+    <div class="top-search">
+      <input type="text" placeholder="Search..." id="searchInput" />
+      <button id="searchBtn">🔍</button>
+    </div>
+  </div>
+  <!-- Navbar with Location Access -->
+  <header class="">
+   <!--<div class="location-box" id="locationBox">
+     📍 <span id="locationText">Detecting location...</span>
+   </div>-->
+<div class="sidenav" id="mySidenav">
+
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+      <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+      <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+    </div>
+    <div id="main">
+
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+</div>
+  </header>
+  <script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to UsolutionsChill</h1>
+      <p>We create amazing digital experiences for everyone.</p>
+      <a href="#services" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      We are a creative web agency providing top-notch digital solutions. Our mission is to bring your ideas to life with stunning designs and clean code.
+    </p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>House Cleaning</h3>
+        <p>Modern and responsive web designs tailored to your business.</p>
+      </div>
+      <div class="card">
+        <h3>Beauty</h3>
+        <p>High-performance websites built using the latest technologies.</p>
+      </div>
+      <div class="card">
+        <h3>AC/Electronics Services</h3>
+        <p>Rank higher on Google and get discovered by more customers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 MyWebsite. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
