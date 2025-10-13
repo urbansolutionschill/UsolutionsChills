@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - User & Admin</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0078ff, #00c6ff);
+    }
+
+    .login-container {
+      background: #fff;
+      width: 380px;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .tab-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+
+    .tab-buttons button {
+      flex: 1;
+      background: #f1f1f1;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 8px;
+      margin: 0 3px;
+    }
+
+    .tab-buttons button.active {
+      background: #0078ff;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .form {
+      display: none;
+      flex-direction: column;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .form.active {
+      display: flex;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0078ff;
+    }
+
+    .form input {
+      margin: 10px 0;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .form input:focus {
+      border-color: #0078ff;
+    }
+
+    .form button {
+      background: #0078ff;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .form button:hover {
+      background: #005ec4;
+    }
+
+    .form p {
+      text-align: center;
+      margin-top: 10px;
+      color: #666;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="tab-buttons">
+      <button id="userTab" class="active">User Login</button>
+      <button id="adminTab">Admin Login</button>
+    </div>
+
+    <!-- User Login Form -->
+    <form id="userForm" class="form active">
+      <h2>User Login</h2>
+      <input type="email" placeholder="User Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+      <p>Don’t have an account? <a href="register.html">Register</a></p>
+    </form>
+
+    <!-- Admin Login Form -->
+    <form id="adminForm" class="form">
+      <h2>Admin Login</h2>
+      <input type="text" placeholder="Admin Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+      <p>Forgot password? <a href="#">Reset</a></p>
+    </form>
+  </div>
+
+  <script>
+    const userTab = document.getElementById("userTab");
+    const adminTab = document.getElementById("adminTab");
+    const userForm = document.getElementById("userForm");
+    const adminForm = document.getElementById("adminForm");
+
+    userTab.addEventListener("click", () => {
+      userTab.classList.add("active");
+      adminTab.classList.remove("active");
+      userForm.classList.add("active");
+      adminForm.classList.remove("active");
+    });
+
+    adminTab.addEventListener("click", () => {
+      adminTab.classList.add("active");
+      userTab.classList.remove("active");
+      adminForm.classList.add("active");
+      userForm.classList.remove("active");
+    });
+  </script>
+
+</body>
+</html>
